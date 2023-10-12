@@ -6,7 +6,7 @@
 CC=g++
 CFLAGS= -std=c++11 -pthread
 HELLOFILES= helloThreads.o Semaphore.o
-MUTUALFILES= mutualEX.o Semaphore.o
+MUTUALFILES= mutualEx.o Semaphore.o
 
 #This rule says that each .o file depends on a .cpp file of the same name
 %.o: %.cpp
@@ -15,7 +15,7 @@ MUTUALFILES= mutualEX.o Semaphore.o
 #Compiling two sets of files, because we are compiling two seperate projects
 HELLO: $(HELLOFILES) $(MUTUALFILES)
 	$(CC) -o helloThreads $(HELLOFILES) $(CFLAGS) $(DEBUGFLAGS)
-	$(CC) -o mutualEX $(MUTUALFILES) $(CFLAGS) $(DEBUGFLAGS
+	$(CC) -o mutualEx $(MUTUALFILES) $(CFLAGS) $(DEBUGFLAGS)
 
 #Setting Debug Flags as the first step of the debug rule
 DEBUG: DEBUGFLAGS = -DDEBUG
