@@ -1,3 +1,5 @@
+//Author:  Nojus Satikauskas 
+
 #include "Semaphore.h"
 #include <iostream>
 #include <thread>
@@ -11,11 +13,13 @@ void taskOne(std::shared_ptr<Semaphore> theSemaphore, int delay){
   std::cout << "print ";
   std::cout << "first"<<std::endl;
   //tell taskTwo to start now
+  theSemaphore->Signal():
 }
 
 /*! displays a message second*/
 void taskTwo(std::shared_ptr<Semaphore> theSemaphore){
   //wait here until taskOne finishes...
+  theSemaphore->Wait();
   std::cout <<"This ";
   std::cout << "will ";
   sleep(5);
