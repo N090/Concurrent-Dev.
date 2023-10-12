@@ -13,7 +13,7 @@ void taskOne(std::shared_ptr<Semaphore> theSemaphore, int delay){
   std::cout << "print ";
   std::cout << "first"<<std::endl;
   //tell taskTwo to start now
-  theSemaphore->Signal():
+  theSemaphore->Signal();
 }
 
 /*! displays a message second*/
