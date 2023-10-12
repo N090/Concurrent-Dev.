@@ -1,6 +1,6 @@
 #Nojus Satikauskas 11/10/2023
-
-#Git Url	:
+#License: GNU GENERAL PUBLIC LICENSE
+#Git Url: https://github.com/N090/Concurrent-Dev./tree/main
 
 
 CC=g++
