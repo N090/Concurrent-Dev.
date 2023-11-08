@@ -1,4 +1,4 @@
-# Lab 1 : Hello  
+# Lab 3 : Barrier  
 
 ## GitHub
 [https://github.com/N090/Concurrent-Dev./edit/main/](https://github.com/N090/Concurrent-Dev./edit/main/)
@@ -18,5 +18,6 @@ Nojus Satikauskas
 3. Run the executable through the shell (./)
 
 ## Files  
-
+Barrier.cpp, Barrier.h.gch, Barrier.h, Makefile, Semaphore.cpp, Semaphore.h, main.cpp
 ## TODO
+test, Doxygen
