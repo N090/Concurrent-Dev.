@@ -18,5 +18,6 @@ Nojus Satikauskas
 3. Run the executable through the shell (./)
 
 ## Files  
-
+Semaphore.cpp, Semaphore.h, hellothreads.cpp, hellothreads.o, mutualEx.cpp, Makefile
 ## TODO
+test, Doxygen
