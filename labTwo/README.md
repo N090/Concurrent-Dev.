@@ -1,4 +1,4 @@
-# Lab 1 : Hello  
+# Lab 2 : Rendezvous  
 
 ## GitHub
 [https://github.com/N090/Concurrent-Dev./edit/main/](https://github.com/N090/Concurrent-Dev./edit/main/)
@@ -18,5 +18,6 @@ Nojus Satikauskas
 3. Run the executable through the shell (./)
 
 ## Files  
+Makefile, Semaphore.cpp,  Semaphore.h rendezvous.cpp, rendezvous
 
 ## TODO
