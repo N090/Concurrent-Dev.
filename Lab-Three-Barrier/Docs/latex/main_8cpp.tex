@@ -1,0 +1,49 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+This main function creates at least two threads demonstrating a reusable barrier in action.  
+
+
+{\ttfamily \#include "{}Barrier.\+h"{}}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a96ca7eba915789dab4c11886f423c42b}{task}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_barrier}{Barrier}} $>$ barrier\+Obj)
+\item 
+int \mbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This main function creates at least two threads demonstrating a reusable barrier in action. 
+
+\begin{DoxyAuthor}{Author}
+Nojus Satikauskas (C00261186) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2023 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+GPL-\/3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} An array of threads
+
+\texorpdfstring{$<$}{<} Pointer to barrier object\Hypertarget{main_8cpp_a96ca7eba915789dab4c11886f423c42b}\label{main_8cpp_a96ca7eba915789dab4c11886f423c42b} 
+\index{main.cpp@{main.cpp}!task@{task}}
+\index{task@{task}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{task()}{task()}}
+{\footnotesize\ttfamily void task (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_barrier}{Barrier}} $>$}]{barrier\+Obj }\end{DoxyParamCaption})}
+
+displays the first function in the barrier being executed 

@@ -1,0 +1,83 @@
+\doxysection{Barrier Class Reference}
+\hypertarget{class_barrier}{}\label{class_barrier}\index{Barrier@{Barrier}}
+
+
+An Implementation of a barrier Using Semaphores.  
+
+
+
+
+{\ttfamily \#include $<$Barrier.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_barrier_a462a2435e07b6fabc0265011f03310ee}{Barrier}} ()
+\item 
+\mbox{\hyperlink{class_barrier_a401f40e73302009b305904ffc7825304}{\texorpdfstring{$\sim$}{\string~}\+Barrier}} ()
+\item 
+\mbox{\hyperlink{class_barrier_a68730c862911d37696957056595aa604}{Barrier}} (int count)
+\item 
+void \mbox{\hyperlink{class_barrier_ab999e172844330d8b9a1c13f3766959d}{set\+Count}} (int count)
+\item 
+int \mbox{\hyperlink{class_barrier_a471bfe5ce54384baa7dbd195ae3a7b30}{get\+Count}} ()
+\item 
+void \mbox{\hyperlink{class_barrier_a59b259f25f6acdc5f943398035d2d87a}{wait\+For\+All}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An Implementation of a barrier Using Semaphores. 
+
+A \doxylink{class_barrier}{Barrier} Implementation.
+
+Uses C++11 features such as mutex and condition variables to implement a barrier using Semaphores with N number threads
+
+Uses C++11 features such as mutex and condition variables to implement a \doxylink{class_barrier}{Barrier} class using Semaphores 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_barrier_a462a2435e07b6fabc0265011f03310ee}\label{class_barrier_a462a2435e07b6fabc0265011f03310ee} 
+\index{Barrier@{Barrier}!Barrier@{Barrier}}
+\index{Barrier@{Barrier}!Barrier@{Barrier}}
+\doxysubsubsection{\texorpdfstring{Barrier()}{Barrier()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Barrier\+::\+Barrier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxylink{class_barrier}{Barrier} constructor \Hypertarget{class_barrier_a401f40e73302009b305904ffc7825304}\label{class_barrier_a401f40e73302009b305904ffc7825304} 
+\index{Barrier@{Barrier}!````~Barrier@{\texorpdfstring{$\sim$}{\string~}Barrier}}
+\index{````~Barrier@{\texorpdfstring{$\sim$}{\string~}Barrier}!Barrier@{Barrier}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Barrier()}{\string~Barrier()}}
+{\footnotesize\ttfamily Barrier\+::\texorpdfstring{$\sim$}{\string~}\+Barrier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxylink{class_barrier}{Barrier} deconstructor \Hypertarget{class_barrier_a68730c862911d37696957056595aa604}\label{class_barrier_a68730c862911d37696957056595aa604} 
+\index{Barrier@{Barrier}!Barrier@{Barrier}}
+\index{Barrier@{Barrier}!Barrier@{Barrier}}
+\doxysubsubsection{\texorpdfstring{Barrier()}{Barrier()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Barrier\+::\+Barrier (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+\doxylink{class_barrier}{Barrier} with parameter constructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barrier_a471bfe5ce54384baa7dbd195ae3a7b30}\label{class_barrier_a471bfe5ce54384baa7dbd195ae3a7b30} 
+\index{Barrier@{Barrier}!getCount@{getCount}}
+\index{getCount@{getCount}!Barrier@{Barrier}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily int Barrier\+::get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns count value \Hypertarget{class_barrier_ab999e172844330d8b9a1c13f3766959d}\label{class_barrier_ab999e172844330d8b9a1c13f3766959d} 
+\index{Barrier@{Barrier}!setCount@{setCount}}
+\index{setCount@{setCount}!Barrier@{Barrier}}
+\doxysubsubsection{\texorpdfstring{setCount()}{setCount()}}
+{\footnotesize\ttfamily void Barrier\+::set\+Count (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+sets count value \Hypertarget{class_barrier_a59b259f25f6acdc5f943398035d2d87a}\label{class_barrier_a59b259f25f6acdc5f943398035d2d87a} 
+\index{Barrier@{Barrier}!waitForAll@{waitForAll}}
+\index{waitForAll@{waitForAll}!Barrier@{Barrier}}
+\doxysubsubsection{\texorpdfstring{waitForAll()}{waitForAll()}}
+{\footnotesize\ttfamily void Barrier\+::wait\+For\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+waits for the threads before starting second half of code 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_barrier_8h}{Barrier.\+h}}\item 
+\mbox{\hyperlink{_barrier_8cpp}{Barrier.\+cpp}}\end{DoxyCompactItemize}

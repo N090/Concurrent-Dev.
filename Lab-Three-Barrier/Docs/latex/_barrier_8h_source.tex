@@ -1,0 +1,31 @@
+\doxysection{Barrier.\+h}
+\hypertarget{_barrier_8h_source}{}\label{_barrier_8h_source}\mbox{\hyperlink{_barrier_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_semaphore_8h}{Semaphore.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_barrier}{Barrier}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{int}\ count;}
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{int}\ threadNum;}
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{bool}\ condition;}
+\DoxyCodeLine{00026\ \ \ std::shared\_ptr<Semaphore>\ mutex;}
+\DoxyCodeLine{00027\ \ \ std::shared\_ptr<Semaphore>\ barrier1;}
+\DoxyCodeLine{00028\ \ \ std::shared\_ptr<Semaphore>\ barrier2;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_barrier_a462a2435e07b6fabc0265011f03310ee}{Barrier}}();}
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{class_barrier_a401f40e73302009b305904ffc7825304}{\string~Barrier}}();}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{class_barrier_a462a2435e07b6fabc0265011f03310ee}{Barrier}}(\textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_barrier_ab999e172844330d8b9a1c13f3766959d}{setCount}}(\textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_barrier_a471bfe5ce54384baa7dbd195ae3a7b30}{getCount}}();}
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_barrier_a59b259f25f6acdc5f943398035d2d87a}{waitForAll}}();}
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

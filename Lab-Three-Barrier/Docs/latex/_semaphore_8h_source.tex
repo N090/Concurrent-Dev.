@@ -1,0 +1,29 @@
+\doxysection{Semaphore.\+h}
+\hypertarget{_semaphore_8h_source}{}\label{_semaphore_8h_source}\mbox{\hyperlink{_semaphore_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ SEMAPHORE\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SEMAPHORE\_H\ }}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <condition\_variable>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_semaphore}{Semaphore}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_uiCount;\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::mutex\ m\_mutex;}
+\DoxyCodeLine{00027\ \ \ \ \ std::condition\_variable\ m\_condition;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_semaphore}{Semaphore}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uiCount=0)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ :\ m\_uiCount(uiCount)\ \{\ \};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ Wait();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{template}<\ \textcolor{keyword}{typename}\ R,\textcolor{keyword}{typename}\ P\ >}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ Wait(\textcolor{keyword}{const}\ std::chrono::duration<R,P>\&\ crRelTime);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ Signal();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
