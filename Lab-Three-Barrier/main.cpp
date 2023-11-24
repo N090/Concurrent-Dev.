@@ -1,7 +1,10 @@
-//Nojus Satikauskas (C00261186)
-//15/11/2023
-
-// Purpose: This main function creates at least two threads demonstrating a reusable barrier in action.
+/**
+ * @file main.cpp
+ * @author Nojus Satikauskas (C00261186)
+ * @brief This main function creates at least two threads demonstrating a reusable barrier in action.
+ * @date 15/11/2023
+ * @copyright GPL-3.0
+ */
 
 #include "Barrier.h"
 #include <thread>

@@ -1,5 +1,10 @@
-//Nojus Satikauskas (C00261186)
-//15/10/2023
+/**
+ * @file Barrier.cpp
+ * @author Nojus Satikauskas (C00261186)
+ * @brief The implementation file for the Barrier class.
+ * @date 15/11/2023
+ * @copyright GPL-3.0
+ */
 
 #include "Barrier.h"
 

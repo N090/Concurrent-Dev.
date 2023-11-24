@@ -1,4 +1,10 @@
-//Nojus Satikauskas (C00261186)
+/**
+ * @file Barrier.h
+ * @author Nojus Satikauskas (C00261186)
+ * @brief The header file for the Barrier class.
+ * @date 15/11/2023
+ * @copyright GPL-3.0
+ */
 
 #include "Semaphore.h"
 #include <iostream>
