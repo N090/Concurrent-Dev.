@@ -1,0 +1,59 @@
+\doxysection{hello\+Threads.\+cpp File Reference}
+\hypertarget{hello_threads_8cpp}{}\label{hello_threads_8cpp}\index{helloThreads.cpp@{helloThreads.cpp}}
+
+
+A \doxylink{class_semaphore}{Semaphore} Implementation to demonstrate serialization, where task A must occur before task B.  
+
+
+{\ttfamily \#include "{}Semaphore.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hello_threads_8cpp_a2b4729d561c345111ccab970fe11e229}{task\+One}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$ the\+Semaphore, int delay)
+\item 
+void \mbox{\hyperlink{hello_threads_8cpp_ae4ea9570be601d182fa473c7ca431852}{task\+Two}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$ the\+Semaphore)
+\item 
+int \mbox{\hyperlink{hello_threads_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{class_semaphore}{Semaphore} Implementation to demonstrate serialization, where task A must occur before task B. 
+
+\begin{DoxyAuthor}{Author}
+Nojus Satikauskas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/10/2023 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+GPL-\/3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{hello_threads_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{hello_threads_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{helloThreads.cpp@{helloThreads.cpp}!main@{main}}
+\index{main@{main}!helloThreads.cpp@{helloThreads.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} Launch the threads ~\newline
+
+
+\texorpdfstring{$<$}{<} Wait for the threads to finish\Hypertarget{hello_threads_8cpp_a2b4729d561c345111ccab970fe11e229}\label{hello_threads_8cpp_a2b4729d561c345111ccab970fe11e229} 
+\index{helloThreads.cpp@{helloThreads.cpp}!taskOne@{taskOne}}
+\index{taskOne@{taskOne}!helloThreads.cpp@{helloThreads.cpp}}
+\doxysubsubsection{\texorpdfstring{taskOne()}{taskOne()}}
+{\footnotesize\ttfamily void task\+One (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$}]{the\+Semaphore,  }\item[{int}]{delay }\end{DoxyParamCaption})}
+
+displays a message first \Hypertarget{hello_threads_8cpp_ae4ea9570be601d182fa473c7ca431852}\label{hello_threads_8cpp_ae4ea9570be601d182fa473c7ca431852} 
+\index{helloThreads.cpp@{helloThreads.cpp}!taskTwo@{taskTwo}}
+\index{taskTwo@{taskTwo}!helloThreads.cpp@{helloThreads.cpp}}
+\doxysubsubsection{\texorpdfstring{taskTwo()}{taskTwo()}}
+{\footnotesize\ttfamily void task\+Two (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$}]{the\+Semaphore }\end{DoxyParamCaption})}
+
+displays a message second 

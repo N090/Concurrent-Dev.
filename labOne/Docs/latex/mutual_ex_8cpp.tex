@@ -1,0 +1,57 @@
+\doxysection{mutual\+Ex.\+cpp File Reference}
+\hypertarget{mutual_ex_8cpp}{}\label{mutual_ex_8cpp}\index{mutualEx.cpp@{mutualEx.cpp}}
+
+
+To demonstrate the implementation of Mutual Exclusion using Semaphores, allowing multiple threads to safely update a shared variable.  
+
+
+{\ttfamily \#include "{}Semaphore.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mutual_ex_8cpp_a3c9683d6a27ab2759968c0378236e661}{update\+Task}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$ first\+Sem, int num\+Updates)
+\item 
+int \mbox{\hyperlink{mutual_ex_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mutual_ex_8cpp_a2d5b01367ae1267dfac47c7875aac5e4}\label{mutual_ex_8cpp_a2d5b01367ae1267dfac47c7875aac5e4} 
+int {\bfseries shared\+Variable} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+To demonstrate the implementation of Mutual Exclusion using Semaphores, allowing multiple threads to safely update a shared variable. 
+
+\begin{DoxyAuthor}{Author}
+Nojus Satikauskas (C00261186) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/10/2023 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+GPL-\/3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mutual_ex_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{mutual_ex_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{mutualEx.cpp@{mutualEx.cpp}!main@{main}}
+\index{main@{main}!mutualEx.cpp@{mutualEx.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} Launch the threads ~\newline
+
+
+\texorpdfstring{$<$}{<} Join the threads with the main thread\Hypertarget{mutual_ex_8cpp_a3c9683d6a27ab2759968c0378236e661}\label{mutual_ex_8cpp_a3c9683d6a27ab2759968c0378236e661} 
+\index{mutualEx.cpp@{mutualEx.cpp}!updateTask@{updateTask}}
+\index{updateTask@{updateTask}!mutualEx.cpp@{mutualEx.cpp}}
+\doxysubsubsection{\texorpdfstring{updateTask()}{updateTask()}}
+{\footnotesize\ttfamily void update\+Task (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$}]{first\+Sem,  }\item[{int}]{num\+Updates }\end{DoxyParamCaption})}
+
+displays a message that is split in to 2 sections to show how a rendezvous works 
