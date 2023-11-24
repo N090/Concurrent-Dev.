@@ -1,0 +1,165 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Implements the dining philosophers problem using Semaphores for synchronization.  
+
+
+{\ttfamily \#include "{}Semaphore.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_af2e8d96df12418ec613ac68b90ba41b7}\label{main_8cpp_af2e8d96df12418ec613ac68b90ba41b7} 
+std\+::vector$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$ {\bfseries forks} (COUNT)
+\item 
+void \mbox{\hyperlink{main_8cpp_abe54df243631d8df5e981b32cf15d428}{think}} (int my\+ID)
+\begin{DoxyCompactList}\small\item\em Make the thread sleep for a random amount of time in the range supplied, simulating the philosopher thinking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_aa32df92d1d166079002534e2b89086f0}{get\+\_\+forks}} (int phil\+ID)
+\begin{DoxyCompactList}\small\item\em Allows a philospher to hold their fork and the next fork in sequence, forcing the last thread to arrive to wait. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ae41186a49e747a798634142f6b41f45a}{put\+\_\+forks}} (int phil\+ID)
+\begin{DoxyCompactList}\small\item\em Allows a philospher to put their fork and the next fork in sequence back down, making them available to other threads. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_aa851e3bdc25dde25f0adcd5825116f47}{eat}} (int my\+ID)
+\begin{DoxyCompactList}\small\item\em Make the thread sleep for a random amount of time in the range supplied, simulating the philosopher eating. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ad90fec9e222f040dcd5a33f7c1dd618e}{philosopher}} (int id)
+\begin{DoxyCompactList}\small\item\em Execute the think, get\+\_\+forks, eat and put\+\_\+forks functions until the program is stopped. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a308572e3937ef7742e8cc93025faf712}\label{main_8cpp_a308572e3937ef7742e8cc93025faf712} 
+const int {\bfseries COUNT} = 5
+\item 
+\Hypertarget{main_8cpp_a5a1bc6e8c62cf965547cd9bba4da2448}\label{main_8cpp_a5a1bc6e8c62cf965547cd9bba4da2448} 
+const int {\bfseries THINKTIME} =3
+\item 
+\Hypertarget{main_8cpp_a92e894dc749f0caa8232e432965090af}\label{main_8cpp_a92e894dc749f0caa8232e432965090af} 
+const int {\bfseries EATTIME} =5
+\item 
+\Hypertarget{main_8cpp_adfce68711855400bc3303bfa32ae784b}\label{main_8cpp_adfce68711855400bc3303bfa32ae784b} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$ {\bfseries footman}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the dining philosophers problem using Semaphores for synchronization. 
+
+An Implementation of a solution to the Dining Philosopher\textquotesingle{}s problem.
+
+\begin{DoxyAuthor}{Author}
+Nojus Satikauskas (C00261186) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17/11/2023 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+GPL-\/3.\+0
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_aa851e3bdc25dde25f0adcd5825116f47}\label{main_8cpp_aa851e3bdc25dde25f0adcd5825116f47} 
+\index{main.cpp@{main.cpp}!eat@{eat}}
+\index{eat@{eat}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{eat()}{eat()}}
+{\footnotesize\ttfamily eat (\begin{DoxyParamCaption}\item[{int}]{my\+ID }\end{DoxyParamCaption})}
+
+
+
+Make the thread sleep for a random amount of time in the range supplied, simulating the philosopher eating. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+ID} & The thread\+ID of the current thread \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_aa32df92d1d166079002534e2b89086f0}\label{main_8cpp_aa32df92d1d166079002534e2b89086f0} 
+\index{main.cpp@{main.cpp}!get\_forks@{get\_forks}}
+\index{get\_forks@{get\_forks}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_forks()}{get\_forks()}}
+{\footnotesize\ttfamily get\+\_\+forks (\begin{DoxyParamCaption}\item[{int}]{phil\+ID }\end{DoxyParamCaption})}
+
+
+
+Allows a philospher to hold their fork and the next fork in sequence, forcing the last thread to arrive to wait. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phil\+ID} & The thread\+ID of the current thread \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} The footman shared semaphore is one less than the philosopher count, blocking the last thread to arrive here
+
+\texorpdfstring{$<$}{<} Philosopher picks up first fork
+
+\texorpdfstring{$<$}{<} Philosopher picks up next fork\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} Initialise a random seed
+
+\texorpdfstring{$<$}{<} Initialise a thread of vectors to the count of philosophers
+
+\texorpdfstring{$<$}{<} Signal each fork in the fork array to start each one in a signalled position
+
+\texorpdfstring{$<$}{<} Initialise footman to a value one less than the amount of philosophers
+
+\texorpdfstring{$<$}{<} Run philosopher until the program is executed
+
+\texorpdfstring{$<$}{<} Join the philosopher threads with the main thread\Hypertarget{main_8cpp_ad90fec9e222f040dcd5a33f7c1dd618e}\label{main_8cpp_ad90fec9e222f040dcd5a33f7c1dd618e} 
+\index{main.cpp@{main.cpp}!philosopher@{philosopher}}
+\index{philosopher@{philosopher}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{philosopher()}{philosopher()}}
+{\footnotesize\ttfamily philosopher (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Execute the think, get\+\_\+forks, eat and put\+\_\+forks functions until the program is stopped. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The thread\+ID of the current thread \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_ae41186a49e747a798634142f6b41f45a}\label{main_8cpp_ae41186a49e747a798634142f6b41f45a} 
+\index{main.cpp@{main.cpp}!put\_forks@{put\_forks}}
+\index{put\_forks@{put\_forks}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{put\_forks()}{put\_forks()}}
+{\footnotesize\ttfamily put\+\_\+forks (\begin{DoxyParamCaption}\item[{int}]{phil\+ID }\end{DoxyParamCaption})}
+
+
+
+Allows a philospher to put their fork and the next fork in sequence back down, making them available to other threads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phil\+ID} & The thread\+ID of the current thread \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Philosopher puts down first fork
+
+\texorpdfstring{$<$}{<} Philosopher puts down next fork
+
+\texorpdfstring{$<$}{<} footman is signalled, unblocking the first philosopher from getting forks\Hypertarget{main_8cpp_abe54df243631d8df5e981b32cf15d428}\label{main_8cpp_abe54df243631d8df5e981b32cf15d428} 
+\index{main.cpp@{main.cpp}!think@{think}}
+\index{think@{think}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{think()}{think()}}
+{\footnotesize\ttfamily think (\begin{DoxyParamCaption}\item[{int}]{my\+ID }\end{DoxyParamCaption})}
+
+
+
+Make the thread sleep for a random amount of time in the range supplied, simulating the philosopher thinking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+ID} & The thread\+ID of the current thread \\
+\hline
+\end{DoxyParams}
