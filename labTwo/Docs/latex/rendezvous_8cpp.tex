@@ -1,0 +1,59 @@
+\doxysection{rendezvous.\+cpp File Reference}
+\hypertarget{rendezvous_8cpp}{}\label{rendezvous_8cpp}\index{rendezvous.cpp@{rendezvous.cpp}}
+
+
+Demonstrating the rendezvous pattern using semaphores.  
+
+
+{\ttfamily \#include "{}Semaphore.\+h"{}}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rendezvous_8cpp_a1ae9fac7e1843e97ee0a25835716843e}{task}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$ mutex\+Sem, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$ barrier\+Sem, std\+::shared\+\_\+ptr$<$ int $>$ thread\+Count)
+\item 
+int \mbox{\hyperlink{rendezvous_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{rendezvous_8cpp_aaf82a050d972af2054cee333174000ed}\label{rendezvous_8cpp_aaf82a050d972af2054cee333174000ed} 
+int {\bfseries arrived} = 0
+\item 
+\Hypertarget{rendezvous_8cpp_ad8f5e19e19f12974c9713e920ec54331}\label{rendezvous_8cpp_ad8f5e19e19f12974c9713e920ec54331} 
+int {\bfseries left} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Demonstrating the rendezvous pattern using semaphores. 
+
+\begin{DoxyAuthor}{Author}
+Nojus Satikauskas (C00261186) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2023 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+GPL-\/3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rendezvous_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{rendezvous_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{rendezvous.cpp@{rendezvous.cpp}!main@{main}}
+\index{main@{main}!rendezvous.cpp@{rendezvous.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} An array of threads
+
+\texorpdfstring{$<$}{<} Pointer to barrier object\Hypertarget{rendezvous_8cpp_a1ae9fac7e1843e97ee0a25835716843e}\label{rendezvous_8cpp_a1ae9fac7e1843e97ee0a25835716843e} 
+\index{rendezvous.cpp@{rendezvous.cpp}!task@{task}}
+\index{task@{task}!rendezvous.cpp@{rendezvous.cpp}}
+\doxysubsubsection{\texorpdfstring{task()}{task()}}
+{\footnotesize\ttfamily void task (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$}]{mutex\+Sem,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_semaphore}{Semaphore}} $>$}]{barrier\+Sem,  }\item[{std\+::shared\+\_\+ptr$<$ int $>$}]{thread\+Count }\end{DoxyParamCaption})}
+
+displays the first function in the barrier being executed 

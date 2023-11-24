@@ -1,0 +1,37 @@
+\doxysection{Semaphore Class Reference}
+\hypertarget{class_semaphore}{}\label{class_semaphore}\index{Semaphore@{Semaphore}}
+
+
+A \doxylink{class_semaphore}{Semaphore} Implementation.  
+
+
+
+
+{\ttfamily \#include $<$Semaphore.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_semaphore_a0d9290d316636875ca85d1d78950a817}\label{class_semaphore_a0d9290d316636875ca85d1d78950a817} 
+{\bfseries Semaphore} (unsigned int ui\+Count=0)
+\item 
+\Hypertarget{class_semaphore_a72aabebf026e3a8b1f3e4d0fa8ee1eda}\label{class_semaphore_a72aabebf026e3a8b1f3e4d0fa8ee1eda} 
+void {\bfseries Wait} ()
+\item 
+\Hypertarget{class_semaphore_a7f700173ae86ae623684109066e07656}\label{class_semaphore_a7f700173ae86ae623684109066e07656} 
+{\footnotesize template$<$typename R , typename P $>$ }\\bool {\bfseries Wait} (const std\+::chrono\+::duration$<$ R, P $>$ \&cr\+Rel\+Time)
+\item 
+\Hypertarget{class_semaphore_a86f92f738b4486439b296d8e235895f2}\label{class_semaphore_a86f92f738b4486439b296d8e235895f2} 
+void {\bfseries Signal} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{class_semaphore}{Semaphore} Implementation. 
+
+Uses C++11 features such as mutex and condition variables to implement \doxylink{class_semaphore}{Semaphore} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_semaphore_8h}{Semaphore.\+h}}\item 
+\mbox{\hyperlink{_semaphore_8cpp}{Semaphore.\+cpp}}\end{DoxyCompactItemize}
