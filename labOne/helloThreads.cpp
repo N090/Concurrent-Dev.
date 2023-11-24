@@ -1,4 +1,11 @@
-//Author:  Nojus Satikauskas 
+/**
+ * @file helloThreads.cpp
+ * @author Nojus Satikauskas
+ * @brief A Semaphore Implementation to demonstrate serialization, where task A must occur before task B.
+ * @date 11/10/2023
+ * @copyright GPL-3.0
+ */
+
 
 #include "Semaphore.h"
 #include <iostream>

@@ -1,4 +1,11 @@
-//Author:    Nojus Satikauskas
+/**
+ * @file mutualEx.cpp
+ * @author Nojus Satikauskas (C00261186)
+ * @brief To demonstrate the implementation of Mutual Exclusion using Semaphores, allowing multiple threads to safely update a shared variable.
+ * @date 11/10/2023
+ * @copyright GPL-3.0
+ */
+
 
 #include "Semaphore.h"
 #include <iostream>
