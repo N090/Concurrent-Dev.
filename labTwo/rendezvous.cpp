@@ -5,7 +5,7 @@
 #include <vector>
 #include <iostream>
 
-//Variables to used to help print correctly
+//Variables to used to print "first" correctly
 int arrived = 0;
 int left = 0;
 
@@ -40,7 +40,7 @@ void task(std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrier
     std::cout << "second " << std::endl;
 }
 
-int main(void)
+int main()
 {
   std::shared_ptr<Semaphore> mutexSem;
   std::shared_ptr<Semaphore> barrierSem;
