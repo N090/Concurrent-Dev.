@@ -1,5 +1,10 @@
-//Nojus Satikauskas
-//09/11/2023
+/**
+ * @file rendezvous.cpp
+ * @author Nojus Satikauskas (C00261186)
+ * @brief Demonstrating the rendezvous pattern using semaphores.
+ * @date 09/11/2023
+ * @copyright GPL-3.0
+ */
 #include "Semaphore.h"
 #include <thread>
 #include <vector>

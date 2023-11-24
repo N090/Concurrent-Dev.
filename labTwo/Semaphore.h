@@ -1,3 +1,11 @@
+/**
+ * @file Semaphore.h
+ * @author Nojus Satikauskas (C00261186)
+ * @brief A Semaphore Implementation
+ * @date 11/10/2023
+ * @copyright GPL-3.0
+ */
+
 #ifndef SEMAPHORE_H
 #define SEMAPHORE_H 
 #include <mutex>
