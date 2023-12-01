@@ -1,0 +1,195 @@
+\doxysection{wator.\+cpp File Reference}
+\hypertarget{wator_8cpp}{}\label{wator_8cpp}\index{wator.cpp@{wator.cpp}}
+
+
+Implements the Wat-\/or (Fish \& Shark minigame).  
+
+
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cell}{Cell}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{wator_8cpp_a224b9163917ac32fc95a60d8c1eec3aa}\label{wator_8cpp_a224b9163917ac32fc95a60d8c1eec3aa} 
+enum {\bfseries Direction} \{ {\bfseries North} = 0
+, {\bfseries East} = 1
+, {\bfseries South} = 2
+, {\bfseries West} = 3
+ \}
+\item 
+\Hypertarget{wator_8cpp_a268ae74e98bc01a0e35f5e215580bcb4}\label{wator_8cpp_a268ae74e98bc01a0e35f5e215580bcb4} 
+enum {\bfseries Cell\+Type} \{ {\bfseries Ocean}
+, {\bfseries Fish}
+, {\bfseries Shark}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{wator_8cpp_aba4511901453580d26f963aef5865967}\label{wator_8cpp_aba4511901453580d26f963aef5865967} 
+\mbox{\hyperlink{struct_cell}{Cell}} {\bfseries get\+Cell} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_a46e679205f7cf7fed7e38ea4d6f2a5dc}\label{wator_8cpp_a46e679205f7cf7fed7e38ea4d6f2a5dc} 
+void {\bfseries set\+Cell} (int x, int y, \mbox{\hyperlink{struct_cell}{Cell}} cell)
+\item 
+\Hypertarget{wator_8cpp_a9dfe94873f2f48614918431af8426f79}\label{wator_8cpp_a9dfe94873f2f48614918431af8426f79} 
+sf\+::\+Render\+Window {\bfseries window} (sf\+::\+Video\+Mode(Window\+XSize, Window\+YSize), "{}SFML Wa-\/Tor world"{})
+\item 
+\Hypertarget{wator_8cpp_af43b983334b31234c08291ad553204b3}\label{wator_8cpp_af43b983334b31234c08291ad553204b3} 
+sf\+::\+Color {\bfseries get\+Fill\+Color} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_a9fe5b5e9fa0f76f462326b215c4d0a6b}\label{wator_8cpp_a9fe5b5e9fa0f76f462326b215c4d0a6b} 
+bool {\bfseries is\+Shark} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_aa0ba3a3ab7e3bcaedfab9325a36bcd3f}\label{wator_8cpp_aa0ba3a3ab7e3bcaedfab9325a36bcd3f} 
+bool {\bfseries is\+Fish} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_a16fc37e21c1d3338302016f868521b8a}\label{wator_8cpp_a16fc37e21c1d3338302016f868521b8a} 
+bool {\bfseries is\+Ocean} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_a04c7ac655fcbf9d0e9ceb73c2226cd05}\label{wator_8cpp_a04c7ac655fcbf9d0e9ceb73c2226cd05} 
+bool {\bfseries has\+Moved} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_ae62e5b8d47f08def059ade12e6a95fc5}\label{wator_8cpp_ae62e5b8d47f08def059ade12e6a95fc5} 
+void {\bfseries set\+Shark} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_a8fa730df063d32510e98a525261fe55b}\label{wator_8cpp_a8fa730df063d32510e98a525261fe55b} 
+void {\bfseries set\+Fish} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_a18faf1ad0560f5706dd8e913c464a8b7}\label{wator_8cpp_a18faf1ad0560f5706dd8e913c464a8b7} 
+void {\bfseries set\+Ocean} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_a1222fb80b0c10b59aca6e1d4cac09c3c}\label{wator_8cpp_a1222fb80b0c10b59aca6e1d4cac09c3c} 
+void {\bfseries set\+Neighbours} (int x, int y, \mbox{\hyperlink{struct_cell}{Cell}} list\mbox{[}$\,$\mbox{]})
+\item 
+\Hypertarget{wator_8cpp_a0c02514ac8a1f6fc9519412e6a40b11d}\label{wator_8cpp_a0c02514ac8a1f6fc9519412e6a40b11d} 
+void {\bfseries shark\+Move} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_a2fcb0a90fdba3b90ff1194fe92bb0947}\label{wator_8cpp_a2fcb0a90fdba3b90ff1194fe92bb0947} 
+void {\bfseries fish\+Move} (int x, int y)
+\item 
+\Hypertarget{wator_8cpp_aabfa6a53da249dcd1b75b6022f163fd7}\label{wator_8cpp_aabfa6a53da249dcd1b75b6022f163fd7} 
+void {\bfseries poll} ()
+\begin{DoxyCompactList}\small\item\em Wrapper function around SFML\textquotesingle{}s poll event. \end{DoxyCompactList}\item 
+\Hypertarget{wator_8cpp_a3c3774c4d06112c7db7b0638d99cfb36}\label{wator_8cpp_a3c3774c4d06112c7db7b0638d99cfb36} 
+void {\bfseries move} (int x, int y)
+\item 
+void \mbox{\hyperlink{wator_8cpp_ae9a056206c85ea73676ecd03dcd4c0b2}{move}} ()
+\begin{DoxyCompactList}\small\item\em Checks that the \doxylink{struct_cell}{Cell} at the x, y co-\/ordinate is a movable fish or shark (that hasn\textquotesingle{}t moved this game loop) and calls into their respective move functions. \end{DoxyCompactList}\item 
+\Hypertarget{wator_8cpp_a2ce3916818386ecdb4f253828a19bbf6}\label{wator_8cpp_a2ce3916818386ecdb4f253828a19bbf6} 
+void {\bfseries draw} ()
+\begin{DoxyCompactList}\small\item\em Wrapper function around SFML\textquotesingle{}s drawing algorithm. \end{DoxyCompactList}\item 
+\Hypertarget{wator_8cpp_a91098fa7d1917ce4833f284bbef12627}\label{wator_8cpp_a91098fa7d1917ce4833f284bbef12627} 
+void {\bfseries initialize} ()
+\begin{DoxyCompactList}\small\item\em Function that initializes the game state, including seeding the random number generations, setting the total number of threads, preparing the mutex locks and thread-\/safe random buffers, as well as building and drawing the initial grid. It does a lot but it only does it once. \end{DoxyCompactList}\item 
+\Hypertarget{wator_8cpp_a51af30a60f9f02777c6396b8247e356f}\label{wator_8cpp_a51af30a60f9f02777c6396b8247e356f} 
+int {\bfseries main} ()
+\begin{DoxyCompactList}\small\item\em The main application entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{wator_8cpp_adacf1b0b60689a191ad6dd077899aa7e}\label{wator_8cpp_adacf1b0b60689a191ad6dd077899aa7e} 
+const int {\bfseries max\+Lock} = 20
+\item 
+\Hypertarget{wator_8cpp_a60a3e0f6ab8606c62256351883478f16}\label{wator_8cpp_a60a3e0f6ab8606c62256351883478f16} 
+const int {\bfseries max\+Distribution} = 50
+\item 
+\Hypertarget{wator_8cpp_af1a556264ff7f6c116fcbb7c41e4eeda}\label{wator_8cpp_af1a556264ff7f6c116fcbb7c41e4eeda} 
+const int {\bfseries max\+Thread} = 8
+\item 
+\Hypertarget{wator_8cpp_adb114dea5ac91e6786143adc010dc526}\label{wator_8cpp_adb114dea5ac91e6786143adc010dc526} 
+int {\bfseries THREADS} = 4
+\item 
+\Hypertarget{wator_8cpp_a157b993c60eb39741c69aeb616a11e70}\label{wator_8cpp_a157b993c60eb39741c69aeb616a11e70} 
+const int {\bfseries rows} = 600
+\item 
+\Hypertarget{wator_8cpp_ae68a25c0023d8b777603c0f8b05e591a}\label{wator_8cpp_ae68a25c0023d8b777603c0f8b05e591a} 
+const int {\bfseries columns} = 600
+\item 
+\Hypertarget{wator_8cpp_a561b7cb4b9d564bdae93ccae335003de}\label{wator_8cpp_a561b7cb4b9d564bdae93ccae335003de} 
+const int {\bfseries fish} = -\/1
+\item 
+\Hypertarget{wator_8cpp_a477ce914b3c34256cc2f610d96b58150}\label{wator_8cpp_a477ce914b3c34256cc2f610d96b58150} 
+const int {\bfseries shark} = -\/1
+\item 
+\Hypertarget{wator_8cpp_a29f7b271f9ec0d79befba1f46a718cd6}\label{wator_8cpp_a29f7b271f9ec0d79befba1f46a718cd6} 
+const int {\bfseries fish\+Add} = 1
+\item 
+\Hypertarget{wator_8cpp_a18ad8948d27fad0804f2cd6889d13ad1}\label{wator_8cpp_a18ad8948d27fad0804f2cd6889d13ad1} 
+const int {\bfseries shark\+Add} = 6
+\item 
+\Hypertarget{wator_8cpp_a9ca50e599234364f232f52c6798d9e8a}\label{wator_8cpp_a9ca50e599234364f232f52c6798d9e8a} 
+const int {\bfseries shark\+Starve} = 2
+\item 
+\Hypertarget{wator_8cpp_ac786e4fbb6d2f1887a847c1a55c7b912}\label{wator_8cpp_ac786e4fbb6d2f1887a847c1a55c7b912} 
+const int {\bfseries shark\+Eat} = 1
+\item 
+\Hypertarget{wator_8cpp_ac7ab5ee55dcd44ef05c33e2c710137f3}\label{wator_8cpp_ac7ab5ee55dcd44ef05c33e2c710137f3} 
+const int {\bfseries Window\+XSize} = 800
+\item 
+\Hypertarget{wator_8cpp_accf8a62be256e8e1d7f915d79e218e6f}\label{wator_8cpp_accf8a62be256e8e1d7f915d79e218e6f} 
+const int {\bfseries Window\+YSize} = 600
+\item 
+\Hypertarget{wator_8cpp_a7879482615ac71ba4792918e8ac97974}\label{wator_8cpp_a7879482615ac71ba4792918e8ac97974} 
+const int {\bfseries cell\+XSize} = Window\+XSize / rows
+\item 
+\Hypertarget{wator_8cpp_ac89bb2757f16a08bba8da53ec1f47754}\label{wator_8cpp_ac89bb2757f16a08bba8da53ec1f47754} 
+const int {\bfseries cell\+YSize} = Window\+YSize / columns
+\item 
+\Hypertarget{wator_8cpp_a8cd24424c6297e218f1f7bf2315354df}\label{wator_8cpp_a8cd24424c6297e218f1f7bf2315354df} 
+sf\+::\+Rectangle\+Shape {\bfseries display} \mbox{[}rows\mbox{]}\mbox{[}columns\mbox{]}
+\item 
+\Hypertarget{wator_8cpp_ada84966386ae4e53cc5de995e50ad1b4}\label{wator_8cpp_ada84966386ae4e53cc5de995e50ad1b4} 
+\mbox{\hyperlink{struct_cell}{Cell}} {\bfseries cells} \mbox{[}rows\mbox{]}\mbox{[}columns\mbox{]}
+\item 
+\Hypertarget{wator_8cpp_a118a7dbcd068cbd656f8d525f991dfbc}\label{wator_8cpp_a118a7dbcd068cbd656f8d525f991dfbc} 
+drand48\+\_\+data {\bfseries Decision\+Data} \mbox{[}max\+Thread\mbox{]}
+\item 
+\Hypertarget{wator_8cpp_a103fb7ce3bb629a4dcbb4a80f26471f9}\label{wator_8cpp_a103fb7ce3bb629a4dcbb4a80f26471f9} 
+int {\bfseries durations} \mbox{[}max\+Distribution\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the Wat-\/or (Fish \& Shark minigame). 
+
+\begin{DoxyAuthor}{Author}
+Nojus Satikauskas (C00261186) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/11/2023 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+GPL-\/3.\+0 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{wator_8cpp_ae9a056206c85ea73676ecd03dcd4c0b2}\label{wator_8cpp_ae9a056206c85ea73676ecd03dcd4c0b2} 
+\index{wator.cpp@{wator.cpp}!move@{move}}
+\index{move@{move}!wator.cpp@{wator.cpp}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks that the \doxylink{struct_cell}{Cell} at the x, y co-\/ordinate is a movable fish or shark (that hasn\textquotesingle{}t moved this game loop) and calls into their respective move functions. 
+
+Thread-\/safe move function that loops over the entire grid (split by the current number of threads) and calls into the single-\/cell move function per cell.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ The x co-\/ordinate of the cell \\
+\hline
+{\em y} & -\/ The y co-\/ordinate of the cell \\
+\hline
+\end{DoxyParams}
